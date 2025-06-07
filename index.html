@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/avatar.jpg" alt="Junhong Lin" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Junhong Lin">Junhong Lin</h1>
+
+          <p class="title center-title">Ph.D Candidate in Computer Science<br>AI Researcher</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:junhong@mit.edu" class="contact-link">junhong@mit.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+17818665226" class="contact-link">+1 (781) 866-5226</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Cambridge, Massachusetts, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/junhongmit/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=p3Oe_YMAAAAJ&hl=en" class="social-link" target="_blank" style="color: white;">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://x.com/JunhongLin5" class="social-link" target="_blank">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a Ph.D. candidate in the Department of Electrical Engineering and Computer Science (EECS) at MIT, where I am fortunate to be advised by <a href="https://jshun.csail.mit.edu/" class="paper-link" target="_blank">Prof. Julian Shun</a>.
+            I received my M.S. in Computer Science at MIT, and my B.S. in Electronic and Information Engineering from Huazhong University of Science and Technology, in 2019.
+          </p>
+
+          <p>
+            My research focuses on <strong>Machine Learning</strong> and <strong>Data Mining</strong>, with an emphasis on developing effective and efficient algorithms to tackle high-impact, real-world problems.
+            I am particularly interested in large language models, graph neural networks, and scalable learning algorithms. I have collaborated with <a href="https://sites.google.com/view/dawei-zhou/home" class="paper-link" target="_blank">Prof. Dawei Zhou</a> at
+            Virgina Tech on reasoning with large language models, and <a href="https://mitibmwatsonailab.mit.edu/people/yada-zhu/" class="paper-link" target="_blank">Dr. Yada Zhu</a> at IBM Research IBM Research on applying graph learning to financial fraud detection.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I'm Focusing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-0.png
+                " alt="efficient icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Efficient ML Algorithms</h4>
+
+                <p class="service-item-text">
+                  Designing efficient and scalable machine learning algorithms to tackle high-impact real-world problems with performance and reliability.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-1.png" alt="enhancement icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">LLM Enhancement</h4>
+
+                <p class="service-item-text">
+                  Developing advanced techniques to improve the reasoning, adaptability, and efficiency of large language models across diverse domains.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-2.png" alt="quant icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Quantitative Research</h4>
+
+                <p class="service-item-text">
+                  Applying statistical and machine learning methods to quantitative modeling, risk analysis, and systematic trading strategies.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-3.png" alt="codesign icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ML + System Co-Design</h4>
+
+                <p class="service-item-text">
+                  Exploring the intersection of machine learning and systems, co-designing algorithms with innovative hardware and software to enhance data acquisition, processing, and real-world analytics.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - News
+        -->
+
+        <section class="News">
+
+          <h3 class="h3 news-title">Latest News</h3>
+
+          <ul class="news-list has-scrollbar">
+
+            <li class="news-item">
+              <div class="content-card" data-news-item>
+                <div class="news-content">
+                  <h4 class="h4 news-item-title" data-news-title style="display: flex; align-items: center;">
+                    One Paper Accepted by KDD'25
+                    <ion-icon name="trophy-outline" style="vertical-align: middle; margin-left: 8px;"></ion-icon>
+                  </h4>
+                  <time datetime="2025-05-15">May 15, 2025</time>
+                  <p class="news-text" data-news-text>
+                    My leading paper <a href="https://arxiv.org/abs/2407.10916" target="_blank" class="paper-link" style="font-style: italic;">"When Heterophily Meets Heterogeneity: Challenges and a New Large-Scale Graph Benchmark"</a> has been accepted by KDD'25 with a unprecedently high review score 8.75/10.0.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Massachusetts Institute of Technology</h4>
+
+              <span>2022 – 2026 (expected)</span>
+
+              <p class="timeline-text">
+                Department of Electrical Engineering & Computer Science (EECS)<br>
+                Computer Science & Artificial Intelligence Laboratory (CSAIL)<br>
+                PhD Candidate in Computer Science
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Massachusetts Institute of Technology</h4>
+
+              <span>2019 – 2022</span>
+
+              <p class="timeline-text">
+                Department of Electrical Engineering & Computer Science (EECS)<br>
+                MIT Research Laboratory of Electronics<br>
+                Master of Science in Computer Science
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Huazhong University of Science and Technology</h4>
+
+              <span>2015 – 2019</span>
+
+              <p class="timeline-text">
+                School of Electronic Information and Communications (EIC)<br>
+                Bachelor of Engineering in Electronic and Information Engineering (EE)
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Quantitative Research Intern</h4>
+
+              <span>May 2025 — Present</span>
+
+              <p class="timeline-text">
+                <strong>Quantbot Technologies LP</strong>, New York, USA
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graduate Research Assistant - Understanding Underlying Mechanisms of Large Language Models</h4>
+
+              <span>Jan 2025 — Present</span>
+
+              <p class="timeline-text">
+                <strong>MIT CSAIL (Prof. Julian Shun)</strong>, Cambridge, Massachusetts, USA<br>
+                • Developed  <a href="https://github.com/junhongmit/P-and-B" class="paper-link" style="font-style: italic;" target="_blank"><strong>Plan-and-Budget</strong></a>,
+                a test-time scaling framework (~3,000 lines of Python) that improves LLM reasoning efficiency by dynamically planning subquestions and budgeting tokens, yielding up to 
+                <strong>+70% accuracy, -39% token reduction, and +187.5% improvement</strong> in ℰ³ metric.<br>
+                • Demonstrated Plan-and-Budget’s capability to <strong>close model efficiency gaps without retraining</strong>, enabling DS-Qwen-32B to match the efficiency of DS-LLaMA-70B across reasoning benchmarks.<br>
+                • Co-developed <a href="https://github.com/Susan571/LENSLLM" class="paper-link" style="font-style: italic;" target="_blank"><strong>LensLLM</strong></a>,
+                an interpretability and model selection framework that analyzes fine-tuning dynamics across checkpoints, achieving up to <strong>91.1% accuracy</strong> and reducing LLM selection cost by <strong>88.5%</strong>, outperforming five state-of-the-art baselines.<br>
+                • Co-authored two papers accepted to <strong>ICML 2025</strong> and under review at top-tier venues.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Machine Learning Student Researcher - Large Language Model Guided Graph Learning</h4>
+
+              <span>August 2023 — Present</span>
+
+              <p class="timeline-text">
+                <strong>Watson AI Lab, IBM Research</strong>, Cambridge, Massachusetts, USA<br>
+                • Proposed a bidirectional reasoning framework between large language models (LLMs) and knowledge graphs
+                (KGs), enabling KG-augmented LLM inference and LLM-assisted KG evolution.<br>
+                • Developed a temporal reasoning framework (~15,000 lines of Python) that significantly outperforms prior
+                methods, achieving up to <strong>23.3% gain</strong> in temporal reasoning tasks and <strong>8% gain</strong> in evolving KG scenarios.<br>
+                • Demonstrated that we <strong>bridged the capability gap between model sizes</strong>—e.g., a LLaMA 3.1–8B model
+                improved from <strong>18.6% to 37.0%</strong>, nearly matching a much larger DeepSeek-V3 671B model (38.3%).<br>
+                • Proposed a super-relation reasoning method that aggregates relation paths into semantically meaningful units
+                to enhance KGQA, yielding <strong>+2.92% accuracy</strong> over baselines across <strong>nine real-world datasets</strong>.<br>
+                • Co-authored two papers accepted to <strong>ICLR 2025</strong> and under review at top-tier venues.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Machine Learning Research Intern - Graph Neural Network Enabled Financial Fraud Detection</h4>
+
+              <span>June 2023 — August 2023</span>
+
+              <p class="timeline-text">
+                <strong>Watson AI Lab, IBM Research</strong>, Cambridge, Massachusetts, USA<br>
+                • Designed the first real-world heterophilic and heterogeneous graph benchmark (<a href="https://github.com/junhongmit/H2GB" class="paper-link" style="font-style: italic;" target="_blank"><strong>ℋ²GB</strong></a>, published in KDD)<br>
+                • Designed the first unified, scalable graph transformer framework (<a href="https://github.com/junhongmit/H2GB" class="paper-link" style="font-style: italic;" target="_blank"><strong>UnifiedGT</strong></a>, published in IEEE Big Data) on large-scale graph mining
+                and implemented the framework from scratch using ~3000 lines of Python code.<br>
+                • Conducted comprehensive experiments using PyTorch and PyTorch Geometric Library (PyG).<br>
+                • Achieved state-of-the-art on 9 large-scale datasets proposed in ℋ2GB and enhanced the node classification
+                accuracy by 5-10%, including RCCD (14 million nodes, 160 million edges).<br>
+                • Achieved state-of-the-art on 6 Anti-Money Laundering (AML) datasets (180 million edges) and enhanced
+                the link classification F1 score by 8-18% while delivering 2.4× greater throughput and reduced latency.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Machine Learning Research Intern - Graph Neural Network Enabled Financial Fraud Detection</h4>
+
+              <span>June 2023 — August 2023</span>
+
+              <p class="timeline-text">
+                <strong>Watson AI Lab, IBM Research</strong>, Cambridge, Massachusetts, USA<br>
+                • Designed the first real-world heterophilic and heterogeneous graph benchmark (<a href="https://github.com/junhongmit/H2GB" class="paper-link" style="font-style: italic;" target="_blank"><strong>ℋ²GB</strong></a>, published in KDD)<br>
+                • Designed the first unified, scalable graph transformer framework (<a href="https://github.com/junhongmit/H2GB" class="paper-link" style="font-style: italic;" target="_blank"><strong>UnifiedGT</strong></a>, published in IEEE Big Data) on large-scale graph mining
+                and implemented the framework from scratch using ~3000 lines of Python code.<br>
+                • Conducted comprehensive experiments using PyTorch and PyTorch Geometric Library (PyG).<br>
+                • Achieved state-of-the-art on 9 large-scale datasets proposed in ℋ2GB and enhanced the node classification
+                accuracy by 5-10%, including RCCD (14 million nodes, 160 million edges).<br>
+                • Achieved state-of-the-art on 6 Anti-Money Laundering (AML) datasets (180 million edges) and enhanced
+                the link classification F1 score by 8-18% while delivering 2.4× greater throughput and reduced latency.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+      <!--
+        - #PUBLICATIONS
+      -->
+
+      <article class="blog" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Publications</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://www.arxiv.org/abs/2505.16122" target="_blank" class="paper-link">Plan and Budget: Effective and Efficient Test-Time Scaling on Large Language Model Reasoning</a>
+              </h4>
+              <span>2025</span>
+              <p class="timeline-text">
+                <strong>Junhong Lin</strong>, Xinyue Zeng, Jie Zhu, Song Wang, Julian Shun, Jun Wu, Dawei Zhou<br>
+                arXiv preprint arXiv:2505.16122.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://arxiv.org/abs/2407.10916" target="_blank" class="paper-link">When Heterophily Meets Heterogeneity: New Graph Benchmarks and Effective Methods</a>
+              </h4>
+              <span>2025</span>
+              <p class="timeline-text">
+                <strong>Junhong Lin</strong>, Xiaojie Guo, Shuaicheng Zhang, Yada Zhu, Julian Shun<br>
+                ACM SIGKDD 2025, 8.75/10 High Review Rating.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://arxiv.org/abs/2505.03793" target="_blank" class="paper-link">LENSLLM: Unveiling Fine-Tuning Dynamics for LLM Selection</a>
+              </h4>
+              <span>2025</span>
+              <p class="timeline-text">
+                Xinyue Zeng, Haohui Wang, <strong>Junhong Lin</strong>, Jun Wu, Tyler Cody, Dawei Zhou<br>
+                International Conference on Machine Learning (ICML 2025).
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://arxiv.org/abs/2503.22166" target="_blank" class="paper-link">Reasoning of Large Language Models over Knowledge Graphs with Super-Relations</a>
+              </h4>
+              <span>2025</span>
+              <p class="timeline-text">
+                Song Wang, <strong>Junhong Lin</strong>, Xiaojie Guo, Julian Shun, Jundong Li, Yada Zhu<br>
+                International Conference on Learning Representations (ICLR 2025).
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://dl.acm.org/doi/10.1145/3677052.3698648" target="_blank" class="paper-link">FraudGT: A Simple, Effective, and Efficient Graph Transformer for Financial Fraud Detection</a>
+              </h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                <strong>Junhong Lin</strong>, Xiaojie Guo, Yada Zhu, Samuel Mitchell, Erik Altman, Julian Shun<br>
+                International Conference on AI in Finance (ICAIF 2024), <strong>Best Paper – Honorary Mention</strong>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://ieeexplore.ieee.org/document/10825327" target="_blank" class="paper-link">UnifiedGT: Towards a Universal Framework of Transformers in Large-Scale Graph Learning</a>
+              </h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                <strong>Junhong Lin</strong>, Xiaojie Guo, Shuaicheng Zhang, Dawei Zhou, Yada Zhu, Julian Shun<br>
+                IEEE International Conference on Big Data (IEEE Big Data 2024)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://arxiv.org/abs/2402.10350" target="_blank" class="paper-link">Large language models for forecasting and anomaly detection: A systematic literature review</a>
+              </h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                Jing Su, Chufeng Jiang, Xin Jin, Yuxin Qiao, Tingsong Xiao, Hongda Ma, Rong Wei, Zhi Jing, Jiajun Xu, <strong>Junhong Lin</strong>
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Patents</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="#" target="_blank" class="paper-link">Reasoning of Large Language Models Over Knowledge Graphs with Super-Relations</a>
+              </h4>
+              <span>Pending US Patent</span>
+              <p class="timeline-text">
+
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="#" target="_blank" class="paper-link">Unified Graph Transformer for Financial Fraud Detection on Massive Graphs</a>
+              </h4>
+              <span>Pending US Patent</span>
+              <p class="timeline-text">
+                Yada Zhu, Xiaojie Guo, <strong>Junhong Lin</strong>,  Shuaicheng Zhang, Julian Shun
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" class="paper-link">Indoor Positioning Method based on Weighted Surface Fitting from Crowdsourced Sample</a>
+              </h4>
+              <span>CN 109059919 B</span>
+              <p class="timeline-text">
+                Bang Wang, <strong>Junhong Lin</strong>, Guang Yang
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" class="paper-link">Location Map Building Method based on Virtual Source Estimation and Trajectory Correction</a>
+              </h4>
+              <span>CN 108919177 B</span>
+              <p class="timeline-text">
+                Bang Wang, <strong>Junhong Lin</strong>, Guang Yang
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" class="paper-link">Portable Psychological Pressure Detector</a>
+              </h4>
+              <span>CN 108294766 A</span>
+              <p class="timeline-text">
+                
+              </p>
+            </li>
+          </ol>
+        </section>
+
+      </article>
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <!-- Awards Section -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="trophy-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Awards & Honors</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">National Science Foundation Student Travel Award</h4>
+              <span>2024</span>
+              <p class="timeline-text">
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Best Paper – Honorary Mention at the 5th International Conference on AI in Finance</h4>
+              <span>2024</span>
+              <p class="timeline-text">
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">2024 J. Francis Reintjes Excellence in 6A Industrial Practice Award</h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                Massachusetts Institute of Technology
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Outstanding Undergraduates in Term of Academic Performance in 2017 (top 1%)</h4>
+              <span>2017</span>
+              <p class="timeline-text">
+                Huazhong University of Science and Technology
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">National 1st Prize & 1st Award for Selected Topic in “Renesas Cup" National Undergraduate Electronic Design Contest</h4>
+              <span>2017</span>
+              <p class="timeline-text">
+                
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">TI Cup Winner & 1st Award in "TI Cup" Hubei Undergraduate Electronic Design Contest</h4>
+              <span>2017</span>
+              <p class="timeline-text">
+                
+              </p>
+            </li>
+            
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Meritorious Winner in Mathematical Contest in Modeling, COMAP</h4>
+              <span>2017</span>
+              <p class="timeline-text">
+                
+              </p>
+            </li>
+            
+          </ol>
+        </section>
+
+        <!-- Presentations Section -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="mic-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Presentations</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">UnifiedGT: Towards a Universal Framework of Transformers in Large-Scale Graph Learning</h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                IEEE International Conference on Big Data (IEEE Big Data 2024)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">FraudGT: A Simple, Effective, and Efficient Graph Transformer for Financial Fraud Detection</h4>
+              <span>2024</span>
+              <p class="timeline-text">
+                International Conference on AI in Finance (ICAIF 2024)
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <!-- Talks Section
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Talks</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Guest Lecture: CS 4824</h4>
+              <span>March 2025</span>
+              <p class="timeline-text">
+                Virginia Tech
+              </p>
+            </li>
+          </ol>
+        </section> -->
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.0889001800347!2d-71.09301272459852!3d42.36194463498353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a94526b345%3A0x303ada1e9664dfed!2sMIT%20Computer%20Science%20%26%20Artificial%20Intelligence%20Laboratory!5e0!3m2!1sen!2sus!4v1749277361187!5m2!1sen!2sus"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="https://formsubmit.co/junhong@mit.edu" method="POST" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
