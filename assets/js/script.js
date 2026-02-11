@@ -1,6 +1,67 @@
 'use strict';
 
 
+// theme variables
+const root = document.documentElement;
+const themeToggleBtn = document.querySelector("[data-theme-toggle]");
+const themeToggleIcon = themeToggleBtn ? themeToggleBtn.querySelector("ion-icon") : null;
+const systemThemeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+const themeStorageKey = "preferred-theme";
+
+const getStoredTheme = function () {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch (error) {
+    return null;
+  }
+}
+
+const setStoredTheme = function (theme) {
+  try {
+    localStorage.setItem(themeStorageKey, theme);
+  } catch (error) {
+    // Ignore write failures (e.g., strict privacy mode)
+  }
+}
+
+const applyTheme = function (theme) {
+  root.dataset.theme = theme;
+  if (!themeToggleBtn || !themeToggleIcon) return;
+
+  const nextTheme = theme === "dark" ? "light" : "dark";
+  themeToggleBtn.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
+  themeToggleBtn.setAttribute("title", `Switch to ${nextTheme} theme`);
+  themeToggleIcon.setAttribute("name", theme === "dark" ? "sunny-outline" : "moon-outline");
+}
+
+const storedTheme = getStoredTheme();
+const initialTheme = storedTheme === "light" || storedTheme === "dark"
+  ? storedTheme
+  : (systemThemeMedia.matches ? "dark" : "light");
+
+applyTheme(initialTheme);
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", function () {
+    const currentTheme = root.dataset.theme === "light" ? "light" : "dark";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    setStoredTheme(nextTheme);
+  });
+}
+
+const syncWithSystemTheme = function (event) {
+  if (getStoredTheme()) return;
+  applyTheme(event.matches ? "dark" : "light");
+}
+
+if (typeof systemThemeMedia.addEventListener === "function") {
+  systemThemeMedia.addEventListener("change", syncWithSystemTheme);
+} else if (typeof systemThemeMedia.addListener === "function") {
+  systemThemeMedia.addListener(syncWithSystemTheme);
+}
+
+
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }

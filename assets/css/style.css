@@ -16,6 +16,7 @@
 \*-----------------------------------*/
 
 :root {
+  color-scheme: dark;
 
   /**
    * colors
@@ -96,11 +97,11 @@
    * shadow
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: 0 4px 14px hsla(0, 0%, 0%, 0.16);
+  --shadow-2: 0 10px 20px hsla(0, 0%, 0%, 0.16);
+  --shadow-3: 0 12px 26px hsla(0, 0%, 0%, 0.18);
+  --shadow-4: 0 14px 30px hsla(0, 0%, 0%, 0.12);
+  --shadow-5: 0 18px 44px hsla(0, 0%, 0%, 0.18);
 
   /**
    * transition
@@ -114,16 +115,124 @@
   --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
   --card-border-radius: 12px;
   --accent-color: var(--orange-yellow-crayola);
+  --navbar-bg: hsla(240, 1%, 17%, 0.75);
+  --overlay-bg: hsl(0, 0%, 5%);
+  --image-overlay: hsla(0, 0%, 0%, 0.5);
+  --map-filter: grayscale(1) invert(1);
+  --scrollbar-thumb: hsla(0, 0%, 0%, 0.3);
+  --scrollbar-thumb-hover: hsla(0, 0%, 0%, 0.5);
+  --scrollbar-thumb-inset: inset 1px 1px 0 hsl(0, 0%, 0%, 0.1),
+                           inset -1px -1px 0 hsla(0, 0%, 0%, 0.1);
+  --theme-toggle-bg: hsla(240, 1%, 17%, 0.95);
+  --theme-toggle-border: var(--jet);
+  --theme-toggle-color: var(--orange-yellow-crayola);
+  --theme-toggle-hover-bg: hsla(240, 1%, 22%, 0.95);
 }
 @media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: #fff;
-    --text-color: #181818;
-    --card-bg: #fff;
-    --card-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    --accent-color: #e6b800;
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg-gradient-onyx: linear-gradient(
+      to bottom right,
+      hsl(40, 24%, 95%) 3%,
+      hsl(35, 22%, 91%) 97%
+    );
+    --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(30, 20%, 88%, 0.35) 0%,
+      hsla(30, 24%, 95%, 0.1) 100%
+    ), hsl(40, 28%, 96%);
+    --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      hsla(45, 95%, 46%, 0.2) 0%,
+      hsla(35, 90%, 50%, 0) 59.86%
+    ), hsl(40, 28%, 96%);
+    --border-gradient-onyx: linear-gradient(
+      to bottom right,
+      hsl(220, 12%, 84%) 0%,
+      hsla(220, 16%, 82%, 0) 50%
+    );
+    --jet: hsl(220, 12%, 84%);
+    --onyx: hsl(220, 22%, 93%);
+    --eerie-black-1: hsl(42, 30%, 98%);
+    --eerie-black-2: hsl(0, 0%, 100%);
+    --smoky-black: hsl(218, 28%, 16%);
+    --white-1: hsl(220, 30%, 22%);
+    --white-2: hsl(220, 35%, 16%);
+    --orange-yellow-crayola: hsl(42, 92%, 42%);
+    --vegas-gold: hsl(40, 45%, 44%);
+    --light-gray: hsl(220, 18%, 35%);
+    --light-gray-70: hsla(220, 16%, 34%, 0.7);
+    --bg-color: hsl(42, 40%, 97%);
+    --text-color: hsl(220, 35%, 16%);
+    --card-bg: hsl(0, 0%, 100%);
+    --card-shadow: 0 2px 8px rgba(17, 26, 41, 0.06);
+    --accent-color: var(--orange-yellow-crayola);
+    --navbar-bg: hsla(42, 55%, 98%, 0.86);
+    --overlay-bg: hsla(220, 20%, 20%, 0.35);
+    --image-overlay: hsla(220, 20%, 15%, 0.18);
+    --map-filter: none;
+    --scrollbar-thumb: hsla(220, 12%, 42%, 0.35);
+    --scrollbar-thumb-hover: hsla(220, 12%, 36%, 0.5);
+    --scrollbar-thumb-inset: inset 1px 1px 0 hsla(220, 20%, 100%, 0.2),
+                             inset -1px -1px 0 hsla(220, 12%, 35%, 0.1);
+    --theme-toggle-bg: hsla(42, 60%, 98%, 0.97);
+    --theme-toggle-border: hsl(220, 14%, 82%);
+    --theme-toggle-color: hsl(220, 30%, 25%);
+    --theme-toggle-hover-bg: hsl(40, 40%, 95%);
   }
 }
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(40, 24%, 95%) 3%,
+    hsl(35, 22%, 91%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(30, 20%, 88%, 0.35) 0%,
+    hsla(30, 24%, 95%, 0.1) 100%
+  ), hsl(40, 28%, 96%);
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg,
+    hsla(45, 95%, 46%, 0.2) 0%,
+    hsla(35, 90%, 50%, 0) 59.86%
+  ), hsl(40, 28%, 96%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(220, 12%, 84%) 0%,
+    hsla(220, 16%, 82%, 0) 50%
+  );
+  --jet: hsl(220, 12%, 84%);
+  --onyx: hsl(220, 22%, 93%);
+  --eerie-black-1: hsl(42, 30%, 98%);
+  --eerie-black-2: hsl(0, 0%, 100%);
+  --smoky-black: hsl(218, 28%, 16%);
+  --white-1: hsl(220, 30%, 22%);
+  --white-2: hsl(220, 35%, 16%);
+  --orange-yellow-crayola: hsl(42, 92%, 42%);
+  --vegas-gold: hsl(40, 45%, 44%);
+  --light-gray: hsl(220, 18%, 35%);
+  --light-gray-70: hsla(220, 16%, 34%, 0.7);
+  --bg-color: hsl(42, 40%, 97%);
+  --text-color: hsl(220, 35%, 16%);
+  --card-bg: hsl(0, 0%, 100%);
+  --card-shadow: 0 2px 8px rgba(17, 26, 41, 0.06);
+  --accent-color: var(--orange-yellow-crayola);
+  --navbar-bg: hsla(42, 55%, 98%, 0.86);
+  --overlay-bg: hsla(220, 20%, 20%, 0.35);
+  --image-overlay: hsla(220, 20%, 15%, 0.18);
+  --map-filter: none;
+  --scrollbar-thumb: hsla(220, 12%, 42%, 0.35);
+  --scrollbar-thumb-hover: hsla(220, 12%, 36%, 0.5);
+  --scrollbar-thumb-inset: inset 1px 1px 0 hsla(220, 20%, 100%, 0.2),
+                           inset -1px -1px 0 hsla(220, 12%, 35%, 0.1);
+  --theme-toggle-bg: hsla(42, 60%, 98%, 0.97);
+  --theme-toggle-border: hsl(220, 14%, 82%);
+  --theme-toggle-color: hsl(220, 30%, 25%);
+  --theme-toggle-hover-bg: hsl(40, 40%, 95%);
+}
+:root[data-theme="dark"] { color-scheme: dark; }
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -156,6 +265,37 @@ button {
   border: none;
   text-align: left;
   cursor: pointer;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--theme-toggle-border);
+  background: var(--theme-toggle-bg);
+  color: var(--theme-toggle-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-1);
+  z-index: 10;
+  transition: background var(--transition-1), transform var(--transition-1), color var(--transition-1);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--theme-toggle-hover-bg);
+  transform: translateY(-1px);
+}
+
+.theme-toggle ion-icon {
+  font-size: 20px;
+  pointer-events: none;
 }
 
 input, textarea {
@@ -504,7 +644,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -688,7 +828,7 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 5%);
+  background: var(--overlay-bg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -840,6 +980,49 @@ main {
   font-size: var(--fs-6);
   line-height: 1.3;
   margin-bottom: 7px;
+}
+
+.timeline-item-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+
+.timeline-item-head .timeline-item-title {
+  margin-bottom: 0;
+}
+
+.timeline-logo {
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timeline-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.timeline-logo .logo-light { display: none; }
+
+:root[data-theme="light"] .timeline-logo .logo-dark { display: none; }
+
+:root[data-theme="light"] .timeline-logo .logo-light { display: block; }
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .timeline-logo .logo-dark { display: none; }
+
+  :root:not([data-theme="dark"]) .timeline-logo .logo-light { display: block; }
 }
 
 .timeline-list span {
@@ -1022,7 +1205,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before { background: var(--image-overlay); }
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1186,7 +1369,7 @@ main {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
+  filter: var(--map-filter);
 }
 
 .contact-form { margin-bottom: 10px; }
@@ -1709,9 +1892,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     * shadow
     */
 
-    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
-    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
-    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+    --shadow-1: 0 3px 10px hsla(0, 0%, 0%, 0.1);
+    --shadow-2: 0 8px 16px hsla(0, 0%, 0%, 0.1);
+    --shadow-3: 0 10px 22px hsla(0, 0%, 0%, 0.11);
 
   }
 
@@ -1824,13 +2007,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--card-bg);
-    background: hsla(0, 0%, 0%, 0.3);
+    background: var(--scrollbar-thumb);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsl(0, 0%, 0%, 0.1),
-                inset -1px -1px 0 hsla(0, 0%, 0%, 0.1);
+    box-shadow: var(--scrollbar-thumb-inset);
   }
 
-  body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 0%, 0.5); }
+  body::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
   body::-webkit-scrollbar-button { height: 60px; }
 
@@ -1945,6 +2127,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
+}
+
+.news-list.has-scrollbar::-webkit-scrollbar-button {
+  width: 0;
 }
 .news-item {
   min-width: 300px;
